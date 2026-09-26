@@ -31,68 +31,31 @@ The dataset contains **7,043 rows and 21 columns**.
 
 ## 3. Methodology
 
-### 🔹 Python
+The project follows an end-to-end data analytics workflow using **Python, SQL, and Power BI**.
 
-Python was used for **data cleaning, preparation, exploratory data analysis, and churn analysis**.
+### 1️⃣ Data Preparation & Cleaning – Python
 
-Main steps included:
+- Loaded the telecom customer churn dataset using **Pandas**.
+- Checked data types, missing values, and duplicate records.
+- Converted `TotalCharges` into numeric format.
+- Handled missing values and prepared the cleaned dataset.
+- Performed exploratory data analysis to understand customer churn patterns.
+- Created visualizations using **Matplotlib**.
 
-- Loaded the raw telecom customer churn dataset.
-- Checked the first few records.
-- Checked the number of rows and columns.
-- Checked column names and data types.
-- Generated summary statistics.
-- Checked missing values.
-- Checked duplicate records.
-- Converted `TotalCharges` from object to numeric format.
-- Identified 11 missing values after conversion.
-- Filled the missing `TotalCharges` values with `0`.
-- Checked churn categories, contract types, and payment methods.
-- Created `TenureGroup` categories.
-- Calculated total customers and churned customers.
-- Calculated the overall churn rate.
-- Analyzed churn by contract.
-- Analyzed churn by payment method.
-- Analyzed churn by internet service.
-- Analyzed churn by tenure group.
-- Compared average monthly charges by churn status.
-- Compared total charges by churn status.
-- Created charts using Matplotlib.
-- Saved the cleaned dataset as `telco_churn_cleaned.csv`.
+### 2️⃣ Data Analysis – SQL
 
-### 🔹 SQL
+- Loaded the cleaned dataset into **MySQL**.
+- Used SQL queries to analyze customer churn.
+- Calculated key metrics such as total customers, churned customers, and churn rate.
+- Analyzed churn across contract type, payment method, and other customer attributes.
+- Used SQL results to support the analysis and business insights.
 
-SQL was used for **business-focused analysis and validation** of the cleaned telecom customer data.
+### 3️⃣ Dashboard & Visualization – Power BI
 
-The analysis includes queries for:
-
-- Total customers
-- Churned customers
-- Churn rate
-- Churn by contract
-- Churn by payment method
-- Average monthly charges by churn status
-- Additional customer churn analysis
-
-The SQL analysis is designed to answer the same business questions explored during the Python analysis.
-
-### 🔹 Power BI
-
-Power BI was used to create an **interactive customer churn dashboard** using the cleaned dataset.
-
-The dashboard includes:
-
-- Total Customers
-- Churned Customers
-- Churn Rate
-- Average Monthly Charges
-- Churn by Contract
-- Churn by Payment Method
-- Churn by Internet Service
-- Churn by Tenure Group
-- Additional churn analysis
-
-The Power BI dashboard presents the analysis in an interactive and easy-to-understand format.
+- Imported the cleaned dataset into **Power BI**.
+- Created KPI cards for key customer and churn metrics.
+- Built interactive visualizations to analyze churn by contract, payment method, internet service, tenure, and other factors.
+- Designed an interactive dashboard to present the findings clearly.
 
 ---
 
@@ -228,28 +191,36 @@ Based on the analysis, the following areas can be considered for further busines
 - Review pricing and service combinations for customers with higher monthly charges.
 - Analyze whether higher monthly charges are associated with particular services or customer segments.
 
-## 7. Deliverables
+---
+
+## 8. Deliverables
 
 The project includes the following files:
 
-- 📁 **Raw Dataset:** [Telco_Customer_Churn.csv](01_Dataset/Telco_Customer_Churn.csv) – Original telecom customer churn dataset.
+- 📁 **Raw Dataset:** https://github.com/deekshi215/Telecom_Customer_Churn_Analysis/blob/main/Telco_Customer_Churn.csv
+- 🧹 **Cleaned Dataset:** https://github.com/deekshi215/Telecom_Customer_Churn_Analysis/blob/main/telco_churn_cleaned.csv
+- 🐍 **Python Notebook:** https://github.com/deekshi215/Telecom_Customer_Churn_Analysis/blob/main/Data_Cleaning_and_EDA.py
+- 🗃️ **SQL Queries:** https://github.com/deekshi215/Telecom_Customer_Churn_Analysis/blob/main/SQL%20Queries.sql
+- 📊 **Power BI Dashboard:** https://github.com/deekshi215/Telecom_Customer_Churn_Analysis/blob/main/Power%20BI%20dashboard.pbix
 
-- 🧹 **Cleaned Dataset:** [telco_churn_cleaned.csv](01_Dataset/telco_churn_cleaned.csv) – Cleaned dataset prepared using Python.
+---
 
-- 🐍 **Python Notebook:** [Data_Cleaning_and_EDA.ipynb](02_Python/Data_Cleaning_and_EDA.ipynb) – Data cleaning, preprocessing, exploratory data analysis, and churn analysis.
-
-- 🗃️ **SQL Queries:** [churn_analysis.sql](03_SQL/churn_analysis.sql) – SQL queries for customer churn analysis and business questions.
-
-- 📊 **Power BI Dashboard:** [Telco_Customer_Churn_Dashboard.pbix](04_PowerBI/Telco_Customer_Churn_Dashboard.pbix) – Interactive dashboard with KPIs and churn analysis.
-
-
-## 🖼 Dashboard Previews
+## 9. Dashboard Previews
 
 ### 1️⃣ Overall Churn Overview
 
-![Overall Churn Dashboard](04_PowerBI/Overall_Churn_Dashboard.png)
+https://github.com/deekshi215/Telecom_Customer_Churn_Analysis/blob/main/Overall%20Churn%20Dashboard.png
 
 ### 2️⃣ Churn Analysis
 
-![Churn Analysis Dashboard](04_PowerBI/Churn_Analysis_Dashboard.png)
+https://github.com/deekshi215/Telecom_Customer_Churn_Analysis/blob/main/Churn%20Analysis%20Dashboard.png
 
+---
+
+## 10. Conclusion
+
+This project highlights that **26.54% of telecom customers churn**, with higher churn observed among **Month-to-Month customers**, **Fiber Optic internet users**, and **Electronic Check payers**. Customers with **shorter tenure** also show higher churn rates.
+
+Key strategies such as **encouraging long-term contracts**, **investigating payment-related issues**, **improving service experience**, and **focusing on early-tenure customers** can help improve customer retention.
+
+The analysis combines **Python, SQL, and Power BI** to provide a clear view of customer churn patterns and support **data-driven business decisions**.
